@@ -1,0 +1,21 @@
+version: "3"
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        APP_ENV: prod
+    env_file:
+      - ./config/node_prod_env
+
+    command: node index.js
+
+  mongo-db:
+    volumes:
+      - mongo-db-data-prod:/data/db
+    env_file:
+      - ./config/mongo_prod_env
+
+volumes:
+  mongo-db-data-prod:
+    driver: local

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        APP_ENV: dev
+    volumes:
+      - ./:/usr/src/app:ro
+      - /app/node_modules
+    env_file:
+      - ./config/node_dev_env
+
+    command: npm run dev
+
+  mongo-db:
+    volumes:
+      - mongo-db-data-dev:/data/db
+    env_file:
+      - ./config/mongo_dev_env
+
+volumes:
+  mongo-db-data-dev:
+    driver: local

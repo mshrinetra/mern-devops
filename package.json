@@ -1,0 +1,19 @@
+{
+  "name": "mern-devops",
+  "version": "1.0.0",
+  "description": "A learning MERN stack and devops project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -L index.js"
+  },
+  "author": "Manvendra Shrinetra",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

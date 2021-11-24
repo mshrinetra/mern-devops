@@ -1,0 +1,3 @@
+NODE_ENV=prod
+MONGO_DB_USER=appuser
+MONGO_DB_PASSWORD=adminOfApp
